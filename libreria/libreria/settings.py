@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'categorias.apps.CategoriasConfig',
     'autores.apps.AutoresConfig',
     'libros.apps.LibrosConfig',
-    'rest_framework'
+    'rest_framework',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -52,9 +53,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddlewar',
 ]
 
 ROOT_URLCONF = 'libreria.urls'
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 TEMPLATES = [
     {
